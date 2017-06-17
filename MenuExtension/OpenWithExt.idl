@@ -1,0 +1,38 @@
+// OpenWithExt.idl : IDL source for OpenWithExt.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (OpenWithExt.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(2A7B8C7B-2D94-43EB-8A1A-4FFC1FAEF236),
+	
+		helpstring("IOpenWithCtxMenuExt Interface"),
+		pointer_default(unique)
+	]
+	interface IOpenWithCtxMenuExt : IUnknown
+	{
+	};
+
+[
+	uuid(F822821B-152B-475F-BFAC-1AD08AD81C09),
+	version(1.0),
+	helpstring("OpenWithExt 1.0 Type Library")
+]
+library OPENWITHEXTLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(AC94BA2C-8211-45D4-AB5C-C2A9BCCC8FB6),
+		helpstring("OpenWithCtxMenuExt Class")
+	]
+	coclass OpenWithCtxMenuExt
+	{
+		[default] interface IOpenWithCtxMenuExt;
+	};
+};

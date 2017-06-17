@@ -1,0 +1,23 @@
+HKCR
+{
+    NoRemove *
+    {
+        NoRemove ShellEx
+        {
+            NoRemove ContextMenuHandlers
+            {
+                OpenWithCtxMenuExt = s '{AC94BA2C-8211-45D4-AB5C-C2A9BCCC8FB6}'
+            }
+        }
+    }
+	NoRemove CLSID
+	{
+		ForceRemove {AC94BA2C-8211-45D4-AB5C-C2A9BCCC8FB6} = s 'OpenWithCtxMenuExt Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}
