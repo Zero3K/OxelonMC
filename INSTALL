@@ -1,0 +1,10 @@
+OxelonMC.exe
+--------------
+
+Open the OxelonMC.vcproj file in Microsoft Visual Studio 2005, choose Release, and build the solution.
+Unicode (Win2000/XP/Vista/7) and Multi-Byte (Win98/WinME) character sets are supported.
+
+menuext.dll
+--------------
+
+Open the MenuExtension\OpenWithExt.dsw file in Microsoft Visual Studio 6, choose Release MinDependency (Unicode or Multi-Byte), and build the project.
